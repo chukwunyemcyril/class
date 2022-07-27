@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mr john" />
+    <meta name="description" content="This is a html site" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgba(8, 24, 27, 0.8);
+        font-family: "Kdam Thmor Pro", sans-serif;
+        font-size: 6px;
+        font-weight: bold;
+        font-style: italic;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- NOTE -->
+
+    <!-- 
+
+                HEXADECIMAL COLOR 
+                They are six digist after the # symbol and
+                 can numbers, aphabets in both upper and lower caese
+                    Example: #000000 === black
+                                #ffffff === white
+                                #cccccc === gray
+
+
+            RGB 
+                    RGB  is Red Green and Black
+
+                    It is a  combination of percentages of this colors to form
+                    a single color
+
+                    Example: rgb(red, green, black)
+                            rgb(255, 255, 555) ===  white
+                            rgb(0, 0, 0) === black
+                            rgb(89, 728, 927) = Give name please
+
+        RGBA 
+                    Red Green Black Alpha
+
+                    It is a  combination of percentages of this colors to form
+                    a single color just like RGB but added with an ALPHA which simply means
+                    the opacity
+
+                    Example: rgba(255, 255, 255, .9)
+                            rgba(203, 23, 8)
+                            rgba(1, 89, 17)
+
+
+
+     -->
+
+    <h1>HTML Advancing</h1>
+    <!-- 
+        FORM METHODS
+        GET
+        POST
+        PUT
+        PATCH
+        DELETE
+     -->
+
+    <!-- FORM USING GET BEGIN -->
+    <form method="get" action="https://jsonplaceholder.typicode.com/posts/101">
+      <label for="userid">Enter name</label> <br />
+      <input id="userid" type="text" placeholder="Enter your name" /> <br />
+      <label for="title">Enter title</label> <br />
+      <input id="title" type="text" placeholder="Enter your title" /> <br />
+      <label for="body">Enter body</label> <br />
+      <input id="body" type="text" placeholder="Enter body" /> <br />
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- FORM USING GET END -->
+
+    <!-- FORM USING POST METHOD BEGIN -->
+
+    <form method="post" action="https://jsonplaceholder.typicode.com/posts">
+      <label for="userid">Enter name</label> <br />
+      <input
+        id="userid"
+        name="userId"
+        type="text"
+        placeholder="Enter your name"
+      />
+      <br />
+      <label for="title">Enter title</label> <br />
+      <input
+        id="title"
+        name="title"
+        type="text"
+        placeholder="Enter your title"
+      />
+      <br />
+      <label for="body">Enter body</label> <br />
+      <input id="body" name="body" type="text" placeholder="Enter body" />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+    <!-- FORM USING POST METHOD END -->
+  </body>
+</html>

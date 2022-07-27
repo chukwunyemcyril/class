@@ -1,0 +1,126 @@
+/* 
+NOTE
+
+MAX_WIDTH =https://www.w3schools.com/cssref/pr_dim_max-width.asp
+MIN_WIDTH = https://www.w3schools.com/cssref/pr_dim_min-width.asp
+
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: auto;
+  /* overflow-y: hidden;
+  overflow-x: hidden; */
+}
+
+p {
+  width: 100%;
+  overflow: auto;
+  display: none;
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 2px;
+  text-align: left;
+}
+
+.fist {
+  column-span: 2;
+}
+
+th {
+  font-size: 4px;
+}
+
+td {
+  font-size: 3px;
+}
+tr:nth-child(odd) {
+  background-color: gray;
+}
+
+
+div {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    margin: 5% auto;
+    text-align: center;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 10px;
+    color: aqua;
+    text-transform: uppercase;
+    display: block;
+}
+
+/* MAX_WIDTH
+
+MIN_WIDTh
+*/
+@media screen and (max-width: 600px){
+        div{
+
+            height: 300px;
+            width: 300px;
+            background-color: #efef23;
+        }
+
+        h2 {
+            color: red;
+            display: block;
+        }
+}
+
+@media screen and (max-width: 320px){
+    div{
+        height: 200px;
+        width: 200px;
+        background-color: #9323ef;
+        background-image: url('../../auto.PNG');
+        
+    }
+
+    h2 {
+        font-size: 10px;
+        color: #fff;
+        display: none;
+    }
+}
