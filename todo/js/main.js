@@ -1,56 +1,35 @@
-// let submitBtn = document.getElementById("submit");
-// let clearBtn = document.querySelector(".clear");
-// let input = document.querySelector(".input");
-// let deleteBtn = document.querySelector(".grocery-list_delete");
-
-// let groceryList = [];
-
-// submitBtn.addEventListener("click", function () {
-//   groceryList.push(input.value);
-//   input.value = "";
-
-//   let html;
-
-//   for (let i = 0; i < groceryList.length; i++) {
-//     html = `
-//     <div class="grocery-list">
-//     <h3 class="grocery-list_item">${groceryList[i]}</h3>
-//     <div class="grocery-list_action">
-//     <p class="grocery-list_update">&Uopf;</p>
-//     <p class="grocery-list_delete">&times;</p>
-//     </div>
-//     </div>
-//     `;
-//   }
-
-//   document.querySelector(".grocery").insertAdjacentHTML("afterbegin", html);
-
-//   clearBtn.style.display = "inline-block";
-// });
-
-// deleteBtn.addEventListener("click", () => {
-//   document
-//     .querySelector(".grocery")
-//     .removeChild(document.querySelector(".grocery-list"));
-//   groceryList = [];
-// });
-
-// if (deleteBtn) {
-//   deleteBtn.addEventListener("click", (e) => {
-//     alert(e);
-//     console.log(e);
-//   });
-// }
-
 let userInput = document.querySelector(".input");
 let submitBtn = document.getElementById("submit");
 let groceries = document.querySelector(".grocery");
 let clearBtn = document.querySelector(".clear");
-let deleteBtn = document.querySelector(".grocery-list_delete");
 
 let groceryList = [];
 
-submitBtn.addEventListener("click", function () {
+const clearGroceries = () => {
+  groceries.innerHTML = "";
+  groceryList = [];
+  clearBtn.style.display = "none";
+};
+
+const removeGrocery = (e) => {
+  e.target.parentElement.parentElement.remove();
+  let grocery =
+    e.target.parentElement.parentElement.firstChild.nextSibling.innerText;
+
+  //FIlTER OUT THE ITEM FROM THE ARRAY USING SPLICE METHOD
+  // let index = groceryList.indexOf(grocery);
+  // groceryList.splice(index, 1);
+
+  //FIlTER OUT THE ITEM FROM THE ARRAY USIN FILTER METHOD
+  let remnant = groceryList.filter((item) => item !== grocery);
+  groceryList = remnant;
+
+  if (groceryList.length === 0) {
+    clearBtn.style.display = "none";
+  }
+};
+
+const addGrocery = () => {
   groceryList.push(userInput.value);
 
   userInput.value = "";
@@ -69,22 +48,16 @@ submitBtn.addEventListener("click", function () {
     `;
   });
 
-  // groceries.innerHTML = html;
-
   groceries.insertAdjacentHTML("afterbegin", html);
-
   clearBtn.style.display = "inline-block";
-});
 
-if (!!deleteBtn) {
-  deleteBtn.addEventListener("click", (e) => {
-    alert(e);
-    console.log(e);
-  });
-}
+  let deleteBtn = document.querySelector(".grocery-list_delete");
 
-clearBtn.addEventListener("click", () => {
-  groceries.innerHTML = "";
-  groceryList = [];
-  clearBtn.style.display = "none";
-});
+  if (!!deleteBtn) {
+    deleteBtn.addEventListener("click", removeGrocery);
+  }
+};
+
+submitBtn.addEventListener("click", addGrocery);
+
+clearBtn.addEventListener("click", clearGroceries);

@@ -83,11 +83,13 @@ body {
 
 .grocery-list_update {
   color: green;
+  border: none;
 }
 
 .grocery-list_delete {
   color: red;
   font-weight: 600;
+  border: none;
 }
 .grocery-list_delete,
 .grocery-list_update {
