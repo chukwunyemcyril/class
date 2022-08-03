@@ -41,7 +41,7 @@ const addGrocery = () => {
     <div class="grocery-list">
     <h3 class="grocery-list_item">${item}</h3>
     <div class="grocery-list_action">
-    <button class="grocery-list_update">&Uopf;</button>
+    <button class="grocery-list_update"><i class="fa fa-facebook-square"></i></button>
     <button class="grocery-list_delete">&times;</button>
     </div>
     </div>
