@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  background-image: url("../images/bg-intro-desktop.png");
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.page-info {
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.page-info_header {
+  font-weight: 700;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.page-info_text_one,
+.page-info_text_two {
+  color: rgb(248, 242, 242);
+  line-height: 1.2;
+  font-size: 0.7rem;
+}
+
+.promo {
+  background-color: hsl(248, 32%, 49%);
+  padding: 0.6rem 1.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.promo_after {
+  color: hsl(246, 25%, 77%);
+}
+
+.form {
+  margin: 1rem 0;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 1.6rem;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+input::placeholder {
+  padding-left: 1rem;
+  font-weight: 200;
+  font-size: inherit;
+}
+
+input::placeholder,
+input:focus,
+input:active {
+  outline: transparent;
+  color: rgb(128, 117, 117);
+}
+
+input::placeholder {
+  font-size: 0.6rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 6px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  background-color: hsl(154, 59%, 51%);
+  color: #fff;
+  margin-top: 0.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.agreement {
+  font-size: 0.5rem;
+  font-weight: 500;
+  color: hsl(249, 10%, 26%);
+  margin-top: 1rem;
+}
+
+.terms {
+  color: hsl(0, 100%, 74%);
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .page-info {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .page-form {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .page-info_header {
+    font-weight: 700;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+}
