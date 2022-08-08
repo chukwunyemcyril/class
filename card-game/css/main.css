@@ -84,7 +84,7 @@ body {
   transition: 1.5s ease all;
   position: relative;
   text-align: center;
-  transition: transform 0.8s;
+  /* transition: transform 0.8s; */
   transform-style: preserve-3d;
 }
 
