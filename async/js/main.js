@@ -50,6 +50,7 @@
 //     }
 //   }
 // }
+console.log("Hello world")
 
 // loop(function (res) {
 //   console.log(res + 1);
